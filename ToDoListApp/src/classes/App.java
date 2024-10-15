@@ -50,7 +50,7 @@ public class App {
         String priority = scanner.nextLine();
        
 
-        Task task = new Task(description, deadline);
+        Task task = new Task(description, priority, deadline);
         taskManager.addTask(task);
         System.out.println("Task added successfully.");
     }
