@@ -1,5 +1,9 @@
 package classes;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+
 public class Task {
     private static int idCounter = 1;
     private int id;
@@ -32,6 +36,7 @@ public class Task {
 
     public void markAsCompleted() {
         this.isCompleted = true;
+        System.out.println("Task ID " + id + " marked as completed."); // Log completion
     }
 
     @Override
