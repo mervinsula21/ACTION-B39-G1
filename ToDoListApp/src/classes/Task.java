@@ -6,11 +6,12 @@ public class Task {
     private String description;
     private String deadline;
     private boolean isCompleted;
+    private String priority;
 
-    public Task(String description, String deadline) {
+    public Task(String description, String priority) {
         this.id = idCounter++;
         this.description = description;
-        this.deadline = deadline;
+        this.priority = priority;
         this.isCompleted = false;
     }
 
@@ -39,6 +40,11 @@ public class Task {
         return "Task ID: " + id +
                ", Description: " + description +
                ", Deadline: " + deadline +
-               ", Completed: " + (isCompleted ? "Yes" : "No");
+               ", Completed: " + (isCompleted ? "Yes" : "No") +
+               ", Priority " + priority;
+    }
+
+    public String getPriority() {
+        return priority;
     }
 }

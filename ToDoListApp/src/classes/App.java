@@ -46,6 +46,10 @@ public class App {
         System.out.print("Enter task deadline (YYYY-MM-DD): ");
         String deadline = scanner.nextLine();
 
+        System.out.print("Enter task priority (Low, Medium, High): ");
+        String priority = scanner.nextLine();
+       
+
         Task task = new Task(description, deadline);
         taskManager.addTask(task);
         System.out.println("Task added successfully.");
